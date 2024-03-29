@@ -1,0 +1,455 @@
+/****** General ***********/
+
+* {
+    font-family: 'Raleway', sans-serif; /* définit la police utilisée */
+}
+
+:root {
+    --main-color: #0065FC; /* définit la couleur principale */
+    --main-bg-color: #F2F2F2; /* définit la couleur de fond principale */
+    --filter-bg-color: #DEEBFF; /* définit la couleur de l'arrière-plan filtré */
+}
+
+.fa-solid {
+    color: var(--main-color); /* définit la couleur des icones */
+}
+
+body {
+    display: flex; /* permet aux éléments du body d'être flex */
+    justify-content: center; /* permet de centrer les contenus */
+}
+
+.main-container {
+    width: 100%; /* définit la largeur à 100% */
+    max-width: 1440px; /* largeur maximum de 1440px pour éviter d'étirer la page web de façon excessive */
+    min-width: 1025px;/* largeur mini de 1024px pour éviter de modifier toute la mise en page */
+    padding: 0 50px; /* permet un espace vide entre le condenu et ses bordures */
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit; /* les liens héritent de la couleur des éléments parent  */
+    text-decoration: none; /* aucun lien souligné */
+}
+
+.section-title {
+    margin: 0;
+    font-size: 22px;
+}
+
+.card img {
+    object-fit: cover; /* permet à l'image de remplir son container en conservant ses proportions  */
+}
+
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color); /* définit la couleur principale des */
+}
+
+/******  Partie Header ***********/
+
+
+.header{ /* correspond à la partie logo + barre nav */
+    display: flex; /* définit le header flex */
+    justify-content: space-between; /* définit les espaces entre chaque éléments du header  */
+    }
+
+.logo_booki{ /* logo */
+    max-width: 60px; /* définit la taille du logo */
+    padding: 30px 0px; 
+}
+
+.nav_header { /* partie barre de navigation */
+    padding-top: 20px; /* définit l'espace au dessus de la barre de nav */
+}
+    
+
+.lien_hebergements:hover{
+    border-top: 3px solid blue; /* définit la bordure bleue au passage de la souris */
+    color: #0065FC;
+}
+nav a{ /* correspond aux liens dans la barre de nav */
+    margin-right: 50px; /* espace à droite de chaque élément dans la barre de nav */
+    padding-top: 20px; /* espace entre le lien et la bordure bleue (élément adjacent) */
+}
+
+
+/****** Partie form-search***********/
+
+.search_form_icon .fa-solid { /* cchange la couleur de cet icône dans le form */
+    color: black;
+    height: 18px;
+    top: 15px;
+    left: 18px;
+}
+
+
+.search_form{ /* correspond à la totalité du formulaire */
+    display: flex; /* permet d'avoir le container flex pour disposer les éléments en flex items  */
+    margin-top: 40px; /* permet d'obtenir l'espace au dessus le formulaire */
+}
+
+.search_form_icon{ /* correspond à la 1ère partie du form */
+    border: 1px solid #F2F2F2; /* bordure du bouton */
+    background-color: #F2F2F2; /* couleur du fond gris clair */
+    width:4%;  /* permet d'obtenir la largeur */
+    display: flex; /* le bouton sera flex afin de placer les élémts en flex-items */
+    justify-content: center; /* de les centrer horizontal */
+    align-items: center; /* de les centrer vertical */
+    border-radius: 15px 0px 0px 15px; /* les coins arrondis */
+}
+
+.search_form_input{ /* correspond à la 2ème partie du bouton le contour */
+    border: 1px solid #F2F2F2;  /* bordure du bouton */
+    border-left: none; /* pas de bordure */
+    border-right: none; /* pas de bordure */
+    display: flex; /* le bouton sera flex afin de placer les élémts en flex-items */
+    justify-content: center;   
+}
+
+.search_form_input input{ /* correspond à la 2ème partie du bouton l'intérieur */
+    height: 49px; /* hauteur du text */
+    border:none;  /* suppression des bordures */
+    font-size: 18px; /* taille de la police */
+    font-weight: 700; /* text en gras */
+    font-family: 'raleway'; /* nom de la police utilisée */
+    text-align: center; /* texte centré */
+}
+
+::placeholder{ /* correspond à la partie input "marseille, France" */
+    color: black; /* permet de changer la couleur */
+}
+
+.search_form_rechercher{ /* correspond à la 3ème partie du bouton */
+    width: auto;  /* largeur du bouton */
+    display: flex; /* le bouton sera flex afin de placer les élémts en flex-items */
+    justify-content: center; /* le texte sera centré*/
+
+}
+
+
+button{ /* correspond à la 3ème partie du bouton */
+    background-color: #0065FC;  /* couleur de fond */
+    border: hidden; /* bordures cachées */
+    color: #F2F2F2; /* text blanc */
+    font-weight:bold; /* text gras */
+    font-size: 18px;  /* taille police */
+    padding: 8px 10px;
+    border-radius: 0px 15px 15px 0px;
+
+}
+
+
+/****** Partie filters  ***********/
+
+
+.all_filters{ /* ccorrespond partie filtres + titre */
+    display: flex; /* permet d'avoir le container flex pour disposer les éléments en flex items  */
+    margin-top: 20px; /* marge sur tous les côtés */
+    align-items: center; /* les éléments sont centrés (le titre est centré/ aux filtres */
+    padding: 20px 20px 20px 0; /* espace sur tous les côtés */
+}
+
+.nav_filters{ /* tous les filtres sans le titre */
+    display: flex; /* permet d'avoir le container flex pour disposer les éléments en flex items ici row par défaut */
+    padding: 20px 0px; /* espace autour  */   
+}
+
+.filter{ 
+    display: flex; /* permet d'avoir le container flex pour disposer les éléments en flex items  */
+    border-radius: 25px; /* permet d'obtenir la forme arrondie' */
+    border: 2px solid #F2F2F2; /* définit la bordure du filter */
+    text-align: center; /* permet de centrer le texte */
+    margin-left: 18px; /* permet d'obtenir de l'espace à gauche des éléments */
+    font-size: 18px; /* permet d'obtenir la taille de la police */
+    font-weight: 700; /* permet d'obtenir la police en gras (poids de la police)  */
+    padding: 10px; /* permet d'obtenir l'espace à l'intérieur autour du texte */
+}
+
+.filter:hover{ /* tous les filtres */
+    background-color: #DEEBFF; /* permet d'obtenir la couleur de fond au passage de la souris */
+}
+
+.filter .fa-solid{
+    color: #0065FC; /* permet de mettre la couleur bleue sur les différents icônes */
+    
+}
+
+.icons{ /* texte dans le filter  */
+    padding: 4px 8px; /* espace autour */
+    margin: 0px; /* pas de marge */
+} 
+
+.icon_filter{
+    margin-right: 5px; /* Ajuste la marge à droite de l'icône */
+}
+
+.name_filter{
+    margin-left: 5px;
+}
+
+/****** Partie Info ***********/
+
+
+.info_icon i{ /* correspond à l'icône seule */
+    color:#0065FC; /* définit la couleur de l'icône i dans la classe=info */
+}
+
+.info{ /* correspond à la partie info totale texte + icône */
+    display:flex; /* permet d'obtenir l'icône et le texte alignés et centrés */
+    align-items: center;   
+    margin-bottom: 20px;
+}
+
+.info1{ /* correspond à la partie texte seule */
+    padding-left: 20px; /* permet d'obtenir l'espace entre l'icône et le texte */
+}
+
+.info_icon .fa-solid{ /* ces propriétés permettent de donner l'apparence à l'icône i */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #F2F2F2;
+    border-radius: 50%;
+    font-size: 13px;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+}
+
+
+/****** Partie Hebergements And Populaires ***********/
+
+
+.hebergements-and-populaires { /* correspond au container heber + pop */
+    display: flex; /* permet d'avoir le container flex pour disposer les éléments en flex items */
+    justify-content: space-between; /* avec des espaces entre */
+}
+
+.hebergements-and-populaires section { /* chq section dans hebergements + pop */
+    background-color: var(--main-bg-color); /* couleur gris clair */
+    border-radius: 20px; /* arrondis aux 4 coins */
+    padding: 30px; /* marge intérieure */
+    box-sizing: border-box;   
+}
+
+/****** Partie Hebergements ***********/
+
+
+.hebergements { /* concerne le container hebergements à marseille */
+    width: 65%; /* définit la largeur du container */
+}
+
+.lien_card img{ /* concerne les images dans les cards */
+    width: 100%; /* définit largeur img à 100% de la largeur de son container donc l'image s'adapte */
+    height: 120px; /* hauteur de l'image */
+    object-fit: cover; /* permet à l'image de remplir son container en conservant ses proportions  */
+    border-radius: 20px 20px 0 0; /* définit les arrondis dans les coins */
+}
+
+.lien_card { /* concerne la totalité de la card image + text */
+    width: 30%; /* largeur de chaque cards */
+    background-color: white; /* couleur de fond */
+    padding: 5px; /* définit la bordure blanche */
+    margin-top: 33px; /* cdéfinit l'espace en haut */
+    border-radius: 20px; /* définit les arrondis dans les coins */
+    box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.1); /* définit l'ombre portée à la card */
+}
+
+.hebergements_cards{ /* concerne les cards sans le titre */
+    display: flex;
+    flex-wrap: wrap; /* permet d'avoir les éléments sur 2 lignes */
+    justify-content: space-between; /* espace entre et autour */
+}
+
+.card_title_hebergements{ /* concerne le titre de la section */
+    margin: 1px 0px 8px 15px;
+    font-size: 16px ;
+}
+
+.card_subtitle_hebergements{ /* concerne le text sous le titre */
+    margin: 8px 0px 8px 15px;
+}
+
+.card_stars_hebergements{ /* concerne les étoiles */
+    margin: 0 0 0 15px;
+}
+
+.afficher_plus{ 
+    font-size: 18px;
+    margin-top: 33px;
+    font-weight: 700;
+}
+
+/****** Partie Populaires ***********/
+
+
+.populaires { /* concerne le container les plus populaires */
+    width: 32%; /* largeur du container */
+}
+
+.populaires-title { /* concerne le titre */
+    display: flex; /* permet d'organiser les éléments en ligne car par défaut "row" */
+    justify-content: space-between; /* créee de l'espace autour des éléments */
+    align-items: center; /* centre le titre */
+}
+
+.populaires-cards .card { /* card dans le container populaire cards */
+    display: flex; /* permet d'organiser les éléments */
+    margin-top: 33px; /* marge au dessus */ 
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px; /* définit la bordure blanche */
+}
+
+.populaires-cards img { /* concerne l'image dans card */
+    width: 33%; /* chaque image utilise 33% de la taille disponible  */
+    height: 136px; /* définit la hauteur de l'image */
+    border-top-left-radius: 20px; /* définit les arrondis dans les coins */
+    border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {  /* concerne le contenu de la card sans l'image */
+    width: 67%;
+    padding-left: 15px; /* marge à gauche du texte */
+    display: flex; /* permet d'organiser l'élément */
+    flex-direction: column; /* en colonnes */
+    justify-content: space-between; /* créee de l'espace autour des éléments */
+    box-sizing: border-box;
+}
+
+.populaires-cards .card-title { /* concerne le titre de la card */
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+.populaires-cards .card-subtitle { /* concerne te texte sous le titre */
+    margin: 0; /* supprime les marges */
+}
+
+
+.populaires-cards .card-rating { /* concerne les étoiles */
+    margin-bottom: 5px; /* ajoute espace sous les éléments */
+}
+
+
+/****** Activités ***********/
+
+
+.activites { /* concerne la partie totzle de activités a Marseille */
+    margin-bottom: 35px; /* ajoute une marge inférieure à chaque élément  */
+    padding: 30px; /* espace sur tous les côtés */
+}
+
+.activites_title { /* le titre  */
+    font-size: 22px; /* concerne la taille de la police du titre */
+    margin-top: 30px; /*  supprime la marge en haut*/
+    margin-bottom: 30px; /* définit une marge inférieure de 30px */
+}
+
+.activites_cards { /* les 4 img */
+    display: flex; /* permet d'organiser l'élément */
+}
+
+.activites_card{ /* chaque card */
+    width: 25%; /* chaque carte utilise 25% de la largeur disponible  */
+    margin: 10px;
+}
+
+.activites_card article { /* contenu de chaque card */
+    background-color: white; /* fond d'ecran en blanc */
+    border-radius: 20px; /*définit la largeur de l'image */
+    box-shadow: 5px 5px 15px #F2F2F2; /* définit l'ombre portée à la card */
+}
+
+.activites_card img { /* img de chaque card */
+    width: 100%; /* définit la largeur de l'image */
+    height: 380px; /* définit la hauteur de l'image */
+    object-fit: cover; /* permet à l'image de remplir son container en conservant ses proportions  */
+    border-radius: 20px 20px 0px 0px; /* définit les coins arrondis de l'image */
+}
+
+.activites_card h3 { /* le titre de chaque card */
+    font-size: 16px; /* permet de définir la taille du titre */
+    padding:20px; /* permet de définir l'espace autour du titre */
+    margin: 0px; /* permet supprimer la marge */
+}
+
+
+
+/****** Footer ***********/
+
+
+.footer_cards{ /* intégralité de la partie footer */
+    display: flex; /* permet d'organiser les éléments en ligne car par défaut "row" */
+    justify-content: flex-start; /* permet de d'aligner les éléments à partir du début  */
+    background-color: #F2F2F2; /* permet d'afficher l'arrière-plan en gris clair */
+    padding: 8px 8px 8px 30px; /* permet de définir les parties de remplissage (haut,droite,bas,gauche) */
+}
+
+.footer_card{ /* chaque card du footer (car découpé en 3 parties */
+    width: 33%;  /* permet de définir 3 largeurs égales dans l'élément */
+}
+
+.liste_sans_puce{
+    list-style-type: none;  /* permet de supprimer les puces */
+}
+
+
+.footer_card li{  /* chq ligne de texte de chaq colonne */
+    margin-top: 15px;  /* permet d'avoir chaque ligne de la liste espacée sur la hauteur */
+}
+
+
+ul{ /* cqe bloc de text de chq colonne */
+    padding:0px;  /* permet d'avoir chaque liste alignée sans marge intérieure  */
+}
+
+
+
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) { /* concerne les appareils jusqu'a 1024px de largeur d'écran */
+    .hebergements-and-populaires { /* les éléments seront alignés en colonne */
+        flex-direction: column;
+    }
+
+    .hebergements { /* occupera toute la largeur disponible */
+        width: 100%; 
+    } 
+
+    .populaires { /* occupera toute la largeur disponible */
+        width: 100%;
+        margin-top: 50px; /* un espacement supplémentaire en haut */
+    }
+
+    .populaires-cards { /* Les éléments seront flex avec de lespace entre eux */
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a { /* les liens auront une largeur de 30% */
+        width: 30%;
+    }
+
+    .populaires-cards .card-title { /* la taille de la police pour une meilleure lisibilité */
+        font-size: 14px;  
+    }
+
+    .populaires-cards .card-subtitle { /* la taille de la police pour une meilleure lisibilité */
+        font-size: 13px;
+    }
+}
+
+/* Small devices (phones, less than 768px) */ 
+
+@media (max-width: 767.98px) { /* à compléter pour lees téléphones */
+    /* ... */
+}
